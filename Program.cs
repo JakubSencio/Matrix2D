@@ -1,10 +1,7 @@
-﻿namespace Matrix2D
-{
-    internal class Program
-    {
-        static void Main(string[] args)
-        {
-            Console.WriteLine("Hello, World!");
-        }
-    }
-}
+﻿using MatrixLib;
+
+Matrix2D m = new(1,2,3,4);
+var p = new Matrix2D();
+
+Console.WriteLine(m==p);
+
