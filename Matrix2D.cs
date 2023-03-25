@@ -49,7 +49,7 @@ namespace MatrixLib
             if (obj is null) return false;
             if (obj is not Matrix2D) return false;
 
-            return Equals(obj as Matrix2D );   //(Matrix2D)obj
+            return Equals(obj as Matrix2D );   //(Matrix2D)obj .
         }
 
         public override int GetHashCode() => HashCode.Combine(A, B, C, D);
