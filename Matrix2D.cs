@@ -54,5 +54,13 @@ namespace MatrixLib
 
         public override int GetHashCode() => HashCode.Combine(A, B, C, D);
 
+        public static bool operator == (Matrix2D? left ,Matrix2D? right)
+        {
+            if (ReferenceEquals(left, right)) return true; // obejmuje rowniez (null == null)
+            if (left is null || right is null) return false;
+
+            return left.Equals(right);
+        }
+        public static bool operator !=(Matrix2D? left, Matrix2D? right) => !(left == right);
     }
 }
