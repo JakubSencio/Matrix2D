@@ -70,10 +70,16 @@ namespace MatrixLib
                 left.C + right.C,
                 left.D + right.D);
         public static Matrix2D operator -(Matrix2D left, Matrix2D right) =>
-            new(left.A + right.A,
-                left.B + right.B,
-                left.C + right.C,
-                left.D + right.D);
+            new(left.A - right.A,
+                left.B - right.B,
+                left.C - right.C,
+                left.D - right.D);
+        public static Matrix2D operator *(Matrix2D left, Matrix2D right) =>
+        new(left.A * right.A + left.B * right.C,
+            left.A * right.B + left.B * right.D,
+            left.C * right.A + left.D * right.C,
+            left.C * right.B + left.D * right.D);
+
 
         public static Matrix2D Parse(string S)
         {
