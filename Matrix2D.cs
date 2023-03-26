@@ -31,6 +31,7 @@ namespace MatrixLib
         {
 
         }
+
         public override string ToString() => $"[[{A}, {B}], [{C}, {D}]]";
 
         public bool Equals(Matrix2D? other)
@@ -62,5 +63,21 @@ namespace MatrixLib
             return left.Equals(right);
         }
         public static bool operator !=(Matrix2D? left, Matrix2D? right) => !(left == right);
+
+        public static Matrix2D operator +(Matrix2D left, Matrix2D right) =>
+            new(left.A + right.A,
+                left.B + right.B,
+                left.C + right.C,
+                left.D + right.D);
+        public static Matrix2D operator -(Matrix2D left, Matrix2D right) =>
+            new(left.A + right.A,
+                left.B + right.B,
+                left.C + right.C,
+                left.D + right.D);
+
+        public static Matrix2D Parse(string S)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
